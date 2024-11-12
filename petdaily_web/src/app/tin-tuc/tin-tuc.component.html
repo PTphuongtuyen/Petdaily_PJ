@@ -1,0 +1,41 @@
+<div>
+    <app-header></app-header>
+</div>
+
+<!-- nội dung trang -->
+<div class="container">
+    <div class="banner">
+        <img src="assets/my-images/banner_tchu.png" alt="banner">
+    </div>
+
+    <div class="noidungtrang">
+        <div class="tieude">
+            <h3>TẤT CẢ BÀI VIẾT</h3>
+        </div>
+        <div class="tatcabai">
+            
+            <div class="motbai" *ngFor="let t of dsTinTuc">
+                <a>
+                    <img src="{{t.hinh}}" alt="">
+                    <p class="tieudebai">{{t.tieuDeChinh}}</p>
+                    <p class="ngay">Ngày: {{t.ngay}}</p>
+                </a>
+                
+            </div>
+        </div>
+
+        <!-- Phân trang -->
+        <!-- <div class="pagination">
+            <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Trang trước</button>
+            <span>Trang {{ currentPage }} / {{ totalPages }}</span>
+            <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Trang sau</button>
+        </div> -->
+        
+    </div>
+
+</div>
+
+<div>
+    <app-footer></app-footer>
+</div>
+

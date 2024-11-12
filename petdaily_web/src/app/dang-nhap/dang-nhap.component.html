@@ -1,0 +1,39 @@
+<div>
+    <app-header></app-header>
+</div>
+
+<!-- nội dung -->
+<div>
+    
+    <!-- <router-outlet></router-outlet> -->
+    <!-- dangnhap.component.html -->
+    <div class=" vh-100 d-flex justify-content-center align-items-center background">
+        <form class="col-5 m-auto rounded p-4 bg-light" #frm1="ngForm">
+          <div class="text-center color-text">
+            <h4>ĐĂNG NHẬP</h4>
+            <p>Đăng nhập để trải nghiệm dịch vụ của Petdaily</p>
+          </div>
+      
+          <p>
+            <input name="username" ngModel class="form-control border border-black shadow-none" type="text" placeholder="Email:"> 
+          </p>
+          <p>
+            <input name="password" ngModel class="form-control border border-black shadow-none" type="password" placeholder="Mật khẩu:"> 
+          </p>
+      
+          <p class="haitrongmot">Bạn mới biết đến Petdaily?</p>
+          <a [routerLink]="['register']" class="color-text haitrongmot" target="_blank">Đăng ký</a>
+      
+          <a [routerLink]="['Quenmatkhau']" class="haitrongmot color-text" target="_blank">Quên mật khẩu</a>
+          <div class="d-grid gap-2">
+            <p><button type="submit" class="btn btn-blue text-white col-12">Đăng nhập </button> </p>
+          </div>
+          
+        </form>
+    
+      </div>    
+    <app-footer></app-footer>
+</div>
+
+
+

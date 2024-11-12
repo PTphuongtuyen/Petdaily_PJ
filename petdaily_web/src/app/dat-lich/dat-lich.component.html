@@ -1,0 +1,87 @@
+<div>
+    <app-header></app-header>
+</div>
+
+<!-- nội dung -->
+<div class="container">
+    <div class="form-section">
+        <h2>ĐẶT LỊCH HẸN ONLINE</h2>
+        <p>Hẹn trước lịch sẽ giúp chúng tôi có thể phục vụ bạn chu đáo.</p>
+        <hr>
+    
+        <!-- Thông báo thành công -->
+        <div id="successMessage" class="hidden">Bạn đã đặt lịch thành công</div>
+    
+        <!-- Form đặt lịch -->
+        <form id="appointmentForm" (submit)="handleFormSubmit($event)">
+            <div class="form-group">
+                <label for="name">Họ tên <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ tên">
+            </div>
+            <div class="form-group">
+                <label for="phone">Điện thoại <span class="required">*</span></label>
+                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" (input)="validatePhoneNumber()" title="Vui lòng chỉ nhập số">
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Nhập email">
+            </div>
+            <div class="form-group">
+                <label for="pet_type">Thú cưng của bạn</label>
+                <select id="pet_type" name="pet_type">
+                    <option value="">Chọn loại thú cưng</option>
+                    <option value="dog">Chó</option>
+                    <option value="cat">Mèo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="service">Chọn dịch vụ <span class="required">*</span></label>
+                <select id="service" name="service" (change)="toggleOptions()">
+                    <option value="">Chọn dịch vụ</option>
+                    <option value="hotel">Khách sạn thú cưng</option>
+                    <option value="health_check">Chăm sóc sức khỏe - Khám và điều trị bệnh</option>
+                    <option value="health_screening">Chăm sóc sức khỏe - Tầm soát sức khỏe</option>
+                    <option value="vaccination">Chăm sóc sức khỏe - Tiêm phòng</option>
+                    <option value="spa">Spa - Grooming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="method">Chọn hình thức <span class="required">*</span></label>
+                <select id="method" name="method" (change)="toggleAddressField()">
+                    <option value="">Chọn hình thức</option>
+                    <option value="store">Tại cửa hàng PetDaily</option>
+                    <option value="home">Tại nhà</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Ngày hẹn <span class="required">*</span></label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="time">Giờ hẹn <span class="required">*</span></label>
+                <select id="time" name="time">
+                    <option value="">Chọn giờ hẹn</option>
+                    <option value="08:00">08:00 - 09:00</option>
+                    <option value="09:00">09:00 - 10:00</option>
+                    <option value="10:00">10:00 - 11:00</option>
+                    <option value="13:00">13:00 - 14:00</option>
+                    <option value="14:00">14:00 - 15:00</option>
+                    <option value="15:00">15:00 - 16:00</option>
+                    <option value="16:00">16:00 - 17:00</option>
+                    <option value="17:00">17:00 - 18:00</option>
+                    <option value="18:00">18:00 - 19:00</option>
+                    <option value="19:00">19:00 - 20:00</option>
+                </select>
+            </div>
+            <input type="submit" value="ĐẶT HẸN">
+        </form>
+    </div>
+
+</div>
+
+
+
+<div>
+    <app-footer></app-footer>
+</div>
+

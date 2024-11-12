@@ -1,0 +1,40 @@
+.header {
+  padding-top: 120px; 
+  /* thêm ở tất cả trang vì cài header cố định khi cuộn trang nên nó che mất nd*/
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: #F9EAF0;
+    padding: 40px;
+  }
+  
+  .banner-content img {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    border-radius: 10px;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+  
+  .about-section h2 {
+    font-size: 32px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    font-size: 16px;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
